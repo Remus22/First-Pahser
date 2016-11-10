@@ -32,9 +32,11 @@ game_state.main.prototype = {
         
         var ledge = this.platforms.create(200, 400, 'ground');
         ledge.body.immovable = true;
-        var ledge= this.platforms.create(800, 600, 'ground');
+        var ledge= this.platforms.create(500, 100, 'ground');
         ledge.body.immovable = true;
-        
+        ledge.width=100
+        var ledge= this.platforms.create(150, 250, 'ground');
+        ledge.body.immovable = true;
         
           
         this.player = game.add.sprite(32, game.world.height - 180, 'Black Mage');
@@ -105,5 +107,5 @@ game_state.main.prototype = {
     }
 };
 game.state.add('main', game_state.main);
-
+game.state.start('main');
 

@@ -1,5 +1,5 @@
-/* global game phaser game_state*/
-game_state.story = function(){};
+/*global game phaser game_state*/
+game_state.story = function() {};
 
 game_state.story.prototype = {
     
@@ -13,11 +13,10 @@ game_state.story.prototype = {
 
     create: function() {
         
-        this.storyText = game.add.text(200, game.world.height / 2, 'Welcome to the game./n Press enter to start)',{
+        this.storyText = game.add.text(200, game.world.height / 2, 'Welcome to the game./n Press up to start)',{
             fill: '#ffffff'
-            
         });
-     this.cursors = game.input.keyboard.createCursorKeys();
+        this.cursors = game.input.keyboard.createCursorKeys();
         this.space.inputEnabled = true;
         var gameNum = 1;
     },
@@ -26,11 +25,11 @@ game_state.story.prototype = {
     update: function() {
         if(this.cursor.down.isDown){ 
             
-            game.state.start('main')
+            game.state.start('main');
             
         }
 
 },
-
+},
 game.state.add('story', game_state.story);
-game.state.add('story' game_state.sto)
+game.state.start('story');
